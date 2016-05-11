@@ -40,7 +40,7 @@ options:
           - whether the ACL pair should be present or absent, defaults to present
         required: false
         choices: ['present', 'absent']
-    token_type:
+    type:
         description:
           - the type of token that should be created, either management or
             client, defaults to client
@@ -148,7 +148,7 @@ def update_acl(module):
     rules = module.params.get('rules')
     state = module.params.get('state')
     token = module.params.get('token')
-    token_type = module.params.get('token_type')
+    token_type = module.params.get('type')
     mgmt = module.params.get('mgmt_token')
     name = module.params.get('name')
     consul = get_consul_api(module, mgmt)
