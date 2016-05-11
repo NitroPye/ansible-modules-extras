@@ -40,7 +40,7 @@ options:
           - whether the ACL pair should be present or absent, defaults to present
         required: false
         choices: ['present', 'absent']
-    type:
+    token_type:
         description:
           - the type of token that should be created, either management or
             client, defaults to client
